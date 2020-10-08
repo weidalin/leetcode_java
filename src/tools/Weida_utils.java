@@ -1,4 +1,4 @@
-package pers.weida.leetcode.tools;
+package tools;
 
 public class Weida_utils {
     public static void print_arr(int[] arr){

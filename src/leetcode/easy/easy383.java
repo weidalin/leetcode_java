@@ -1,2 +1,2 @@
-package easy;public class easy383 {
+package leetcode.easy;public class easy383 {
 }

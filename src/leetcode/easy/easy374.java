@@ -1,4 +1,4 @@
-package easy;
+package leetcode.easy;
 /*
 猜数字游戏的规则如下：
 

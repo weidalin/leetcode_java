@@ -1,6 +1,7 @@
-package pers.weida.leetcode.tools;
-import java.util.Queue;
+package tools;
+
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class TreeNode {
     public int val;

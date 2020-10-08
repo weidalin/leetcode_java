@@ -1,10 +1,6 @@
-package pers.weida.leetcode.medium;
+package leetcode.medium;
 
-import pers.weida.leetcode.tools.TreeNode;
-
-import java.util.ArrayList;
-import java.util.List;
-import pers.weida.leetcode.tools.Weida_utils;
+import tools.Weida_utils;
 
 /**
  * Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.

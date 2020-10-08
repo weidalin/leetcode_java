@@ -1,10 +1,11 @@
-package pers.weida.leetcode.medium;
+package leetcode.medium;
+
+import tools.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
-
-import pers.weida.leetcode.tools.TreeNode;
 
 /**
  * 145. 二叉树的后序遍历
