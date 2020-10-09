@@ -1,6 +1,6 @@
-package easy;
+package leetcode.easy;
 
-public class easy383 {
+public class easy_383 {
     /**
      *
      * @param ransomNote

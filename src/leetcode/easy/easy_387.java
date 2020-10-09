@@ -1,4 +1,4 @@
-package easy;
+package leetcode.easy;
 
 import java.util.HashMap;
 
@@ -16,7 +16,7 @@ import java.util.HashMap;
  * s = "loveleetcode"
  * 返回 2
  */
-public class easy387 {
+public class easy_387 {
 
     /**
      * 执行用时：

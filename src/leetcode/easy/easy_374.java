@@ -1,4 +1,4 @@
-package easy;
+package leetcode.easy;
 /*
 猜数字游戏的规则如下：
 
@@ -15,7 +15,7 @@ package easy;
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
-public class easy374 {
+public class easy_374 {
     static int pick = 1;
     public static int guess(int n){
 
