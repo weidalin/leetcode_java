@@ -1,9 +1,8 @@
 package leetcode.backtrack;
 
-import javafx.util.Pair;
+
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -64,6 +63,7 @@ public class easy_401 {
     public static List<String> readBinaryWatch(int num) {
         List<String> ans = new ArrayList<>();
         if(num >= 9) return ans;
+        //first 3
         for(int i = 0; i <= 3; i++) {
             if(num - i > 5) continue;
             List<String> h = new ArrayList<>();
@@ -100,8 +100,23 @@ public class easy_401 {
             arr[i] = 0;
         }
     }
+
+    //Integer.bitCount()
+    //bitCount实现的功能是计算一个（byte,short,char,int统一按照int方法计算）int,long类型的数值在二进制下“1”的数量。
+    public static List<String> readBinaryWatchV2(int num){
+        List<String> times = new ArrayList<>();
+        for (int h=0; h<12; h++){
+            for(int m=0; m<60; m++){
+                if (Integer.bitCount(h) + Integer.bitCount(m) == num){
+                    times.add(String.format("%d:%02d", h,m));
+                }
+            }
+        }
+        return times;
+
+    }
     public static void main(String[] args) {
-        List<String> res = readBinaryWatch(1);
+        List<String> res = readBinaryWatchV2(4);
         System.out.println(res);
     }
 }
