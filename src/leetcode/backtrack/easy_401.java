@@ -101,6 +101,20 @@ public class easy_401 {
         }
     }
 
+    /**
+     * 执行用时：
+     * 21 ms
+     * , 在所有 Java 提交中击败了
+     * 8.44%
+     * 的用户
+     * 内存消耗：
+     * 38.8 MB
+     * , 在所有 Java 提交中击败了
+     * 46.55%
+     * 的用户
+     * @param num
+     * @return
+     */
     //Integer.bitCount()
     //bitCount实现的功能是计算一个（byte,short,char,int统一按照int方法计算）int,long类型的数值在二进制下“1”的数量。
     public static List<String> readBinaryWatchV2(int num){
