@@ -1,4 +1,4 @@
-package leetcode.easy;
+package src.leetcode.easy;
 
 /**
  * 344. 反转字符串

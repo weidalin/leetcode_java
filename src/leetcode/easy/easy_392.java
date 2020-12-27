@@ -1,4 +1,4 @@
-package leetcode.easy;
+package src.leetcode.easy;
 
 /**
  * 392. 判断子序列

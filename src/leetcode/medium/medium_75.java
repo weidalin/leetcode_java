@@ -1,4 +1,4 @@
-package leetcode.medium;
+package src.leetcode.medium;
 
 import static tools.Weida_utils.print_arr;
 

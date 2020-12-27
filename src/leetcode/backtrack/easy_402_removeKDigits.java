@@ -1,4 +1,4 @@
-package leetcode.backtrack;
+package src.leetcode.backtrack;
 
 import static java.lang.Integer.parseInt;
 

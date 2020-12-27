@@ -1,10 +1,10 @@
 package tools;
 
 public class ListNode {
-      int val;
-      public ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-      }
- }
+    public int val;
+    public ListNode next;
+    public ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
