@@ -20,10 +20,32 @@ package leetcode.hotcode.hot205_isisomorphic;
 输入: s = "paper", t = "title"
 输出: true
  */
-public class isIsomorphic {
-    public boolean isIsomorphic(String s, String t) {
-
-
-        return false;
+public class isIsomorphic_1 {
+    public static boolean isIsomorphic(String s, String t) {
+        char[] chars = s.toCharArray();
+        char[] chart = t.toCharArray();
+        //记录地 i 个出现的字母；
+        int[] preIndexOfs = new int[256];
+        int[] preIndexOft = new int[256];
+        for (int i = 0; i < chars.length; i++){
+            if (preIndexOfs[chars[i]] != preIndexOft[chart[i]]){
+                return false;
+            }
+            preIndexOfs[chars[i]] = i+1;
+            preIndexOft[chart[i]] = i+1;
+        }
+        return true;
     }
 }
+/**
+ * 执行用时：
+ * 3 ms
+ * , 在所有 Java 提交中击败了
+ * 98.51%
+ * 的用户
+ * 内存消耗：
+ * 38.6 MB
+ * , 在所有 Java 提交中击败了
+ * 44.01%
+ * 的用户
+ */

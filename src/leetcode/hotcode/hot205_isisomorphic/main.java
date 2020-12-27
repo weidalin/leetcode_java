@@ -1,9 +1,9 @@
+package leetcode.hotcode.hot205_isisomorphic;
+
 import tools.ListNode;
 
 import static leetcode.hotcode.hot205_isisomorphic.isIsomorphic_1.isIsomorphic;
-import static src.leetcode.hotcode.hot2_add_two_numbers.addTwoNumbers.addTwoNumbers_1;
 import static tools.Weida_utils.make_list;
-import static tools.Weida_utils.print_ListNode;
 
 public class main {
     public  static void main(String[] args) {
