@@ -1,4 +1,4 @@
-package leetcode.hotcode.hot205_isisomorphic;
+package leetcode.easy.easy205_isisomorphic;
 /*
 205. 同构字符串
 给定两个字符串 s 和 t，判断它们是否是同构的。

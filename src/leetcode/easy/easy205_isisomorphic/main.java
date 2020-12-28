@@ -1,8 +1,8 @@
-package leetcode.hotcode.hot205_isisomorphic;
+package leetcode.easy.easy205_isisomorphic;
 
 import tools.ListNode;
 
-import static leetcode.hotcode.hot205_isisomorphic.isIsomorphic_1.isIsomorphic;
+import static leetcode.easy.easy205_isisomorphic.isIsomorphic_1.isIsomorphic;
 import static tools.Weida_utils.make_list;
 
 public class main {

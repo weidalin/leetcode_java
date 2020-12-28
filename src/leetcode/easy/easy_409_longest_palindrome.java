@@ -5,7 +5,7 @@ package src.leetcode.easy;//package leetcode.easy;
 //
 //    }
 //
-//    public static void main(String[] args) {
+//    public static void leetcode.hotcode.hot617_mergeTrees.main(String[] args) {
 //
 //    }
 //}
