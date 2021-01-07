@@ -1,4 +1,4 @@
-package leetcode.labuladong.binarytree.binarytree105_buildTree.buildTree;
+package leetcode.labuladong.binarytree.binarytree105_buildTree;
 
 import tools.TreeNode;
 

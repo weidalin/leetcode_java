@@ -1,14 +1,11 @@
+package leetcode.labuladong.binarytree.binarytree538_convertBST;
+
 import tools.ListNode;
 import tools.TreeNode;
 
-import java.util.List;
-
-import static leetcode.labuladong.binarytree.binarytree106_buildTree.buildTree_1.buildTree;
-import static leetcode.labuladong.binarytree.binarytree230_kthSmallest.kthSmallest_1.kthSmallest;
 import static leetcode.labuladong.binarytree.binarytree538_convertBST.convertBST_1.convertBST;
-import static leetcode.labuladong.binarytree.binarytree652_findDuplicateSubtrees.findDuplicateSubtrees_1.findDuplicateSubtrees;
 import static tools.TreeNode.InitTree;
-import static tools.Weida_utils.*;
+import static tools.Weida_utils.make_list;
 import static tools.Weida_utils.print_tree;
 
 public class main {
@@ -36,8 +33,8 @@ public class main {
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
         print_tree(treeNode_1);
-       convertBST(treeNode_1);
-       print_tree(treeNode_1);
+        convertBST(treeNode_1);
+        print_tree(treeNode_1);
 
     }
 

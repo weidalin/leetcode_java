@@ -5,6 +5,8 @@ import java.util.Queue;
 
 public class TreeNode {
     public int val;
+    // 以该节点为根的树的节点总数
+    public int size;
     public TreeNode left;
     public TreeNode right;
 
