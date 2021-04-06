@@ -1,14 +1,13 @@
+package leetcode.hotcode.hot121_best_time_to_buy_and_sell_stock;
+
 import tools.ListNode;
 import tools.TreeNode;
 
-import java.util.LinkedList;
-import java.util.List;
-
-import static leetcode.labuladong.binarytree.binarytree543_diameterOfBinaryTree.diameterOfBinaryTree_1.diameterOfBinaryTree;
+import static leetcode.hotcode.hot121_best_time_to_buy_and_sell_stock.MaxProfit_1.maxProfit_1;
 import static leetcode.labuladong.binarytree.binarytree897_increasingBST.increasingBST_1.increasingBST;
-import static leetcode.labuladong.binarytree.binarytree938_rangeSumBST.rangeSumBST_1.rangeSumBST;
 import static tools.TreeNode.InitTree;
-import static tools.Weida_utils.*;
+import static tools.Weida_utils.make_list;
+import static tools.Weida_utils.print_tree;
 
 public class main {
     public  static void main(String[] args) {
@@ -20,7 +19,7 @@ public class main {
         int x = 1 , y = 4;
 
         int[] list_input_1 = {1,2,3,4,5};
-        int[] list_input_2 = {9,15,7,20,3};
+        int[] list_input_2 = {7,1,5,3,6,4};
         int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
 
         Integer[] tree_input_1 = {5,3,6,2,4,null,8,1,null,null,null,7,9};
@@ -35,8 +34,8 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-        TreeNode res = increasingBST(treeNode_1);
-        print_tree(res);
+        int res = maxProfit_1(list_input_2);
+        System.out.print(res);
     }
 
 }

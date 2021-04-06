@@ -1,14 +1,13 @@
+package written_examination.momo;
+
 import tools.ListNode;
 import tools.TreeNode;
 
-import java.util.LinkedList;
 import java.util.List;
 
-import static leetcode.labuladong.binarytree.binarytree543_diameterOfBinaryTree.diameterOfBinaryTree_1.diameterOfBinaryTree;
-import static leetcode.labuladong.binarytree.binarytree897_increasingBST.increasingBST_1.increasingBST;
-import static leetcode.labuladong.binarytree.binarytree938_rangeSumBST.rangeSumBST_1.rangeSumBST;
 import static tools.TreeNode.InitTree;
-import static tools.Weida_utils.*;
+import static tools.Weida_utils.make_list;
+import static written_examination.momo.leetcode54_spiral_matrix_01.spiralOrder;
 
 public class main {
     public  static void main(String[] args) {
@@ -35,8 +34,8 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-        TreeNode res = increasingBST(treeNode_1);
-        print_tree(res);
+        List<Integer> res = spiralOrder(matrix);
+        System.out.print(res);
     }
 
 }
