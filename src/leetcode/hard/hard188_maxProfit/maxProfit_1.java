@@ -25,6 +25,9 @@ public class maxProfit_1 {
      * @param prices
      * @return
      * buy[i][j]、sell[i][j] 表示对于数组 prices[0..i] 中的价格而言，进行恰好 j 笔交易
+     * 我们用 \textit{buy}[i][j]buy[i][j] 表示对于数组 \textit{prices}[0..i]prices[0..i] 中的价格而言，进行恰好 jj 笔交易，并且当前手上持有一支股票，这种情况下的最大利润；用 \textit{sell}[i][j]sell[i][j] 表示恰好进行 jj 笔交易，并且当前手上不持有股票，这种情况下的最大利润。
+     *
+     *
      * 状态转移方程：
      * buy[i][j]=max{buy[i−1][j],sell[i−1][j]−price[i]}
      * sell[i][j]=max{sell[i−1][j],buy[i−1][j−1]+price[i]}

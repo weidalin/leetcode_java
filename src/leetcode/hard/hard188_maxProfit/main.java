@@ -12,19 +12,8 @@ public class main {
 
         int k = 2;
 
-        int[] list_input_1 = {2,4,3};
-        int[] list_input_2 = {5,6,4};
-
-        String s = "lili";
-        String t = "coco";
-
-        ListNode list_1 = make_list(list_input_1);
-        ListNode list_2 = make_list(list_input_2);
         //#############################################################################################
         int res = maxProfit(k, nums);
         System.out.print(res);
-
-
-
     }
 }

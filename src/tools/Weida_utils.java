@@ -12,6 +12,13 @@ public class Weida_utils {
             System.out.print(obj+" ");
         }
     }
+
+    public static void print_2darr(int[][] arrs){
+        for (int[] arr: arrs){
+            print_arr(arr);
+            System.out.println();
+        }
+    }
     public static void print_ListNode(ListNode list){
         while (list != null){
             System.out.print(list.val);
