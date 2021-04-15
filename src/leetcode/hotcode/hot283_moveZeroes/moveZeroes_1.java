@@ -1,7 +1,6 @@
 package leetcode.hotcode.hot283_moveZeroes;
 
 import static tools.Weida_utils.print_arr;
-import static tools.Weida_utils.swap;
 
 /**
  * 283. 移动零

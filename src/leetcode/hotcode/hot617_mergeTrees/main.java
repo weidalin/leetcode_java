@@ -6,10 +6,8 @@ import tools.TreeNode;
 import java.util.List;
 
 import static leetcode.hotcode.hot448_findDisappearedNumbers.findDisappearedNumbers_1.findDisappearedNumbers;
-import static leetcode.hotcode.hot617_mergeTrees.MergeTrees_1.mergeTrees;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
-import static tools.Weida_utils.print_tree;
 
 public class main {
     public  static void main(String[] args) {

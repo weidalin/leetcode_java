@@ -4,10 +4,8 @@ import tools.ListNode;
 import tools.TreeNode;
 
 import static leetcode.hotcode.hot121_best_time_to_buy_and_sell_stock.MaxProfit_1.maxProfit_1;
-import static leetcode.labuladong.binarytree.binarytree897_increasingBST.increasingBST_1.increasingBST;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
-import static tools.Weida_utils.print_tree;
 
 public class main {
     public  static void main(String[] args) {
