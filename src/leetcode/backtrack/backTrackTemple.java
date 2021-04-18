@@ -1,4 +1,4 @@
-package src.leetcode.backtrack;
+package leetcode.backtrack;
 
 import sun.font.TrueTypeFont;
 

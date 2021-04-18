@@ -22,7 +22,7 @@ import static tools.Weida_utils.*;
 public class minPathSum_1 {
     public static int minPathSum(int[][] grid) {
         //dp[] = min(dp[col-1], dp[col]) + grid[row][col]
-        if (grid.length == 0 || grid.length == 0)
+        if (grid.length == 0 || grid[0].length == 0)
             return 0;
         int rows = grid.length, cols = grid[0].length;
         int[] dp = new int[cols];

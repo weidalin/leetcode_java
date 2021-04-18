@@ -19,6 +19,14 @@ public class FindKthLargest_5 {
     public static int findKthLargest(int[] nums, int k) {
         //堆，时间复杂度O(NlogK) 空间O(K)
         PriorityQueue<Integer> pq = new PriorityQueue<>();//小顶堆
+        //大顶堆
+//        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
+//            @Override
+//            public int compare(Integer o1, Integer o2) {
+//                return o2.compareTo(o1);
+//            }
+//        });
+
         for (int num : nums){
             pq.add(num);
             if(pq.size() > k)

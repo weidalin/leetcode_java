@@ -26,8 +26,11 @@ public class leetcode54_spiral_matrix_02 {
         for(int i = 0; i < total; i++){
             order.add(matrix[cur_row][cur_col]);
             visited[cur_row][cur_col] = true;
-            int nextRow = cur_row + directions[directionIndex][0], nextColumn = cur_col + directions[directionIndex][1];
-            if(nextRow < 0 || nextRow >= rows || nextColumn < 0 || nextColumn >= colums || visited[nextRow][nextColumn] == true)
+            int nextRow = cur_row + directions[directionIndex][0];
+            int nextColumn = cur_col + directions[directionIndex][1];
+            if(nextRow < 0 || nextRow >= rows ||
+                    nextColumn < 0 || nextColumn >= colums ||
+                    visited[nextRow][nextColumn] == true)
                 directionIndex = (directionIndex + 1) % 4;
             cur_row += directions[directionIndex][0];
             cur_col += directions[directionIndex][1];

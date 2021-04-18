@@ -46,7 +46,6 @@ public class solveNQueens {
         return path;
     }
 
-
     //row表示第几行，col表示第几列
     private static boolean valid(char[][] chess, int row, int col) {
         //判断当前列有没有皇后,因为他是一行一行往下走的，
