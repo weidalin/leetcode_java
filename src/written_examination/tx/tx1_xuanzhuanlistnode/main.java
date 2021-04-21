@@ -1,11 +1,11 @@
+package written_examination.tx.tx1_xuanzhuanlistnode;
+
 import tools.ListNode;
 import tools.TreeNode;
 
-import static leetcode.swordoffer.offer10II_numWays.NumWays_1.numWays;
-import static leetcode.swordoffer.offer58I_reverseWords.ReverseWords_1.reverseWords;
-import static leetcode.swordoffer.offer64_sumNums.SumNums_1.sumNums;
 import static tools.TreeNode.InitTree;
-import static tools.Weida_utils.*;
+import static tools.Weida_utils.make_list;
+import static tools.Weida_utils.print_ListNode;
 import static written_examination.tx.tx1_xuanzhuanlistnode.Main_ac.solve;
 
 public class main {
@@ -35,9 +35,9 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-        int res = sumNums(10);
-//        print_ListNode(res);
-        System.out.println(res);
+        ListNode res = solve(list_1);
+        print_ListNode(res);
+//        System.out.println(res);
 //        print_arr(res);
     }
 

@@ -1,12 +1,11 @@
+package leetcode.swordoffer.offer64_sumNums;
+
 import tools.ListNode;
 import tools.TreeNode;
 
-import static leetcode.swordoffer.offer10II_numWays.NumWays_1.numWays;
-import static leetcode.swordoffer.offer58I_reverseWords.ReverseWords_1.reverseWords;
 import static leetcode.swordoffer.offer64_sumNums.SumNums_1.sumNums;
 import static tools.TreeNode.InitTree;
-import static tools.Weida_utils.*;
-import static written_examination.tx.tx1_xuanzhuanlistnode.Main_ac.solve;
+import static tools.Weida_utils.make_list;
 
 public class main {
     public  static void main(String[] args) {
