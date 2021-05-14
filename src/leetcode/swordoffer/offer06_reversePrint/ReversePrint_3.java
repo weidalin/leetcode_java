@@ -30,7 +30,7 @@ public class ReversePrint_3 {
 
     private void helper(int n, int i, ListNode head) {
         if(head != null){
-            helper(n, i + 1,head.next);
+            helper(n, i + 1, head.next);
         }
         res[n-i] = head.val;
     }

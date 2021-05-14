@@ -19,4 +19,10 @@ public class Node {
         right = _right;
         next = _next;
     }
+
+    public Node(int _val,Node _left,Node _right) {
+        val = _val;
+        left = _left;
+        right = _right;
+    }
 };

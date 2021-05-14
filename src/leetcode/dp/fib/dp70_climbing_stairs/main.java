@@ -3,7 +3,7 @@ package leetcode.dp.fib.dp70_climbing_stairs;
 import tools.ListNode;
 import tools.TreeNode;
 
-import static leetcode.dp.fib.dp70_climbing_stairs.Climbing_stairs_2.climbStairs;
+import static leetcode.dp.fib.dp70_climbing_stairs.Climbing_stairs_3.climbStairs;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
 

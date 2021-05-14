@@ -30,7 +30,7 @@ public class maxProfit_1 {
      *
      * 状态转移方程：
      * buy[i][j]=max{buy[i−1][j],sell[i−1][j]−price[i]}
-     * sell[i][j]=max{sell[i−1][j],buy[i−1][j−1]+price[i]}
+     *
      * 确定边界:
      * buy[0][1..k] 设置为一个非常小的值
      * 而对于buy[0][0]，它的值为 −prices[0]
