@@ -1,8 +1,10 @@
+package leetcode.hotcode.hot279_numSquares;
+
 import tools.ListNode;
 import tools.TreeNode;
 
 import static leetcode.hotcode.hot266_invertTree.InvertTree_2.invertTree;
-import static leetcode.labuladong.binarytree.binarytree538_convertBST.convertBST_1.convertBST;
+import static leetcode.hotcode.hot279_numSquares.numSquares_1.numSquares;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
 import static tools.Weida_utils.print_tree;
@@ -38,11 +40,11 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-        TreeNode res = invertTree(treeNode_1);
+        int res = numSquares(4);
 //        print_ListNode(res);
-//        System.out.println(res);
+        System.out.println(res);
 //        print_arr(res);
-        print_tree(res);
+//        print_tree(res);
     }
 
 }

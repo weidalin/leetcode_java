@@ -2,7 +2,7 @@ package leetcode.hotcode.hot141_hasCycle;
 
 import tools.ListNode;
 
-public class HasCycle_1 {
+public class HasCycle_3 {
     /**
      * 141. 环形链表
      * 给定一个链表，判断链表中是否有环。
@@ -31,18 +31,16 @@ public class HasCycle_1 {
         if (head == null || head.next == null){
             return false;
         }
-        ListNode p = head;
-        while(true){
+        ListNode p = head.next;
+        while(head != p){
             if(p == null || p.next == null)
                 return false;
             head = head.next;
             p = p.next.next;
-            if(head == p){
-                return true;
-            }
         }
+        return true;
     }
-}/**
+} /**
  执行用时：
  0 ms
  , 在所有 Java 提交中击败了

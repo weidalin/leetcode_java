@@ -1,11 +1,11 @@
+package leetcode.dp.leetcode647_countSubstrings;
+
 import tools.ListNode;
 import tools.TreeNode;
 
-import static leetcode.hotcode.hot266_invertTree.InvertTree_2.invertTree;
-import static leetcode.labuladong.binarytree.binarytree538_convertBST.convertBST_1.convertBST;
+import static leetcode.dfs.leetcode647_countSubstrings.countSubstrings_1.countSubstrings;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
-import static tools.Weida_utils.print_tree;
 
 public class main {
     public  static void main(String[] args) {
@@ -29,7 +29,7 @@ public class main {
         Integer[] tree_input_1 = {4,1,6,0,2,5,7,null,null,null,3,null,null,null,8};
         Integer[] tree_input_2 = {5,4,8,11,null,13,4,7,2,null,null,5,1};
 
-        String s = "  hello world!  ";
+        String s = "abc";
         String t = "a good   example";
 
         ListNode list_1 = make_list(list_input_1);
@@ -38,11 +38,11 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-        TreeNode res = invertTree(treeNode_1);
+        int res = countSubstrings(s);
 //        print_ListNode(res);
-//        System.out.println(res);
+        System.out.println(res);
 //        print_arr(res);
-        print_tree(res);
+//        print_tree(res);
     }
 
 }

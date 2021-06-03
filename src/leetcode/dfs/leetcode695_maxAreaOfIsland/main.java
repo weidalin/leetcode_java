@@ -1,8 +1,10 @@
+package leetcode.dfs.leetcode695_maxAreaOfIsland;
+
 import tools.ListNode;
 import tools.TreeNode;
 
+import static leetcode.dfs.leetcode695_maxAreaOfIsland.maxAreaOfIsland_2.maxAreaOfIsland;
 import static leetcode.hotcode.hot266_invertTree.InvertTree_2.invertTree;
-import static leetcode.labuladong.binarytree.binarytree538_convertBST.convertBST_1.convertBST;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
 import static tools.Weida_utils.print_tree;
@@ -23,7 +25,9 @@ public class main {
         int[][] matrix = {  {1,3,1},
                             {1,5,1},
                             {4,2,1}};
-        int[][] matrix2 = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] matrix2 = {{1,1,0},
+                            {0,0,1},
+                            {1,1,1}};
         int[][] matrix3 = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
 
         Integer[] tree_input_1 = {4,1,6,0,2,5,7,null,null,null,3,null,null,null,8};
@@ -38,11 +42,11 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-        TreeNode res = invertTree(treeNode_1);
+        int res = maxAreaOfIsland(matrix2);
 //        print_ListNode(res);
-//        System.out.println(res);
+        System.out.println(res);
 //        print_arr(res);
-        print_tree(res);
+//        print_tree(res);
     }
 
 }
