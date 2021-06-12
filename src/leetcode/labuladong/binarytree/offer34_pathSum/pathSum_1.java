@@ -1,4 +1,4 @@
-package leetcode.swordoffer.offer34_pathSum;
+package leetcode.labuladong.binarytree.offer34_pathSum;
 
 import tools.TreeNode;
 
