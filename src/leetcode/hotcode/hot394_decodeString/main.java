@@ -1,14 +1,13 @@
-package leetcode.hotcode.hot22_generateParenthesis;
+package leetcode.hotcode.hot394_decodeString;
 
 import tools.ListNode;
 import tools.TreeNode;
 
-import java.util.List;
-
-import static leetcode.hotcode.hot22_generateParenthesis.test.generateParenthesis;
-import static leetcode.hotcode.hot94_inorderTraversal.inorderTraversal_1.inorderTraversal;
+import static leetcode.hotcode.hot266_invertTree.InvertTree_2.invertTree;
+import static leetcode.hotcode.hot394_decodeString.decodeString_1.decodeString;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
+import static tools.Weida_utils.print_tree;
 
 public class main {
     public  static void main(String[] args) {
@@ -29,10 +28,10 @@ public class main {
         int[][] matrix2 = {{1,2,3},{4,5,6},{7,8,9}};
         int[][] matrix3 = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
 
-        Integer[] tree_input_1 = {3,9,20,null,null,15,7};
+        Integer[] tree_input_1 = {4,1,6,0,2,5,7,null,null,null,3,null,null,null,8};
         Integer[] tree_input_2 = {5,4,8,11,null,13,4,7,2,null,null,5,1};
 
-        String s = "  hello world!  ";
+        String s = "3[a2[c]]";
         String t = "a good   example";
 
         ListNode list_1 = make_list(list_input_1);
@@ -41,10 +40,11 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-        List<String> res = generateParenthesis(3);
+        String res = decodeString(s);
 //        print_ListNode(res);
-        System.out.println(res);
+        System.out.println("a" );
 //        print_arr(res);
+//        print_tree(res);
     }
 
 }

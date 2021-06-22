@@ -1,12 +1,12 @@
-package leetcode.hotcode.hot22_generateParenthesis;
+package leetcode.hotcode.hot20_isValid;
 
 import tools.ListNode;
 import tools.TreeNode;
 
 import java.util.List;
 
+import static leetcode.hotcode.hot20_isValid.isValid_1.isValid;
 import static leetcode.hotcode.hot22_generateParenthesis.test.generateParenthesis;
-import static leetcode.hotcode.hot94_inorderTraversal.inorderTraversal_1.inorderTraversal;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
 
@@ -32,7 +32,7 @@ public class main {
         Integer[] tree_input_1 = {3,9,20,null,null,15,7};
         Integer[] tree_input_2 = {5,4,8,11,null,13,4,7,2,null,null,5,1};
 
-        String s = "  hello world!  ";
+        String s = "()[]{}";
         String t = "a good   example";
 
         ListNode list_1 = make_list(list_input_1);
@@ -41,7 +41,7 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-        List<String> res = generateParenthesis(3);
+        boolean res = isValid(s);
 //        print_ListNode(res);
         System.out.println(res);
 //        print_arr(res);
