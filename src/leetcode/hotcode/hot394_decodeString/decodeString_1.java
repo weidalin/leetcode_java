@@ -35,7 +35,7 @@ public class decodeString_1 {
         StringBuilder res = new StringBuilder();
         int multi = 0;
         LinkedList<Integer> stack_multi = new LinkedList<>();
-        LinkedList<java.lang.String> stack_res = new LinkedList<>();
+        LinkedList<String> stack_res = new LinkedList<>();
         for(char c : s.toCharArray()){
             if( c == '['){
                 stack_multi.addLast(multi);
