@@ -27,6 +27,12 @@ import java.util.List;
  * 输出: false
  */
 public class wordBreak_3 {
+    /**
+     * dfs 看不懂.................
+     * @param s
+     * @param wordDict
+     * @return
+     */
     public static boolean wordBreak(String s, List<String> wordDict) {
         boolean[] visited = new boolean[s.length() + 1];
         return dfs(s, 0, wordDict, visited);
@@ -35,10 +41,12 @@ public class wordBreak_3 {
     private static boolean dfs(String s, int start, List<String> wordDict, boolean[] visited) {
         for(String word : wordDict){
             int nextStart = start + word.length();
+            // 每一轮dfs只关心，s[start, ] 是否可以找到一个字典里的单词，如果找到了
             if(nextStart > s.length() || visited[nextStart]){
                 continue;
             }
             if(s.indexOf(word, start) == start){
+                // 能够到达s的最后一个下标，则返回true
                 if(nextStart == s.length() || dfs(s, nextStart, wordDict, visited)){
                     return true;
                 }

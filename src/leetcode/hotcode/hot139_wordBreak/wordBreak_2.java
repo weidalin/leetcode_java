@@ -27,6 +27,7 @@ import java.util.List;
  * 输出: false
  */
 public class wordBreak_2 {
+    // 暴力
     public static boolean wordBreak(String s, List<String> wordDict) {
         boolean[] dp = new boolean[s.length() + 1];
         dp[0] = true;

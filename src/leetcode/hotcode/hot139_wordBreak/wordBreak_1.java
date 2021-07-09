@@ -27,25 +27,27 @@ import java.util.List;
  * 输出: false
  */
 public class wordBreak_1 {
+    /**
+     * 类似于背包问题dp
+     * 记录后缀
+     * @param s
+     * @param wordDict
+     * @return
+     */
     public static boolean wordBreak(String s, List<String> wordDict) {
-        boolean[] visited = new boolean[s.length() + 1];
-        return dfs(s, 0, wordDict, visited);
-    }
-
-    private static boolean dfs(String s, int i, List<String> wordDict, boolean[] visited) {
-        if(i >= s.length()){
-            return true;
-        }
-        if(visited[i] != true){
-            return true;
-        }
-        for(int j = i; j < s.length(); j++){
-            if(wordDict.contains(s.substring(i, j+1)) && dfs(s, j + 1, wordDict, visited)){
-                visited[i] = true;
-                return true;
+        int n = s.length();
+        // memo[i] 表示s中以i-1结尾的字符串能否可以被wordDict拆分
+        boolean[] memo = new boolean[n + 1];
+        memo[0] = true;
+        for(int i = 1; i < n; i++){
+            for(int j = 0; j < i; j++){
+                if(memo[j] && wordDict.contains(s.substring(j, i))){
+                    memo[i] = true;
+                    break;
+                }
             }
         }
-        visited[i] = false;
-        return false;
+        return memo[n];
+
     }
 }

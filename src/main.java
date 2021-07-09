@@ -39,6 +39,7 @@ public class main {
 //        Integer kk = Integer.valueOf(123);
         String res = longestPalindrome(s);
 //        print_ListNode(res);
+//        System.out.println(Integer.valueOf('1'+""));
         System.out.println(res);
 //        print_arr(res);
 //        print_tree(res);

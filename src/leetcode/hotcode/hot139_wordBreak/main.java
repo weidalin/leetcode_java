@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static leetcode.hotcode.hot139_wordBreak.wordBreak_3.wordBreak;
+import static leetcode.hotcode.hot139_wordBreak.wordBreak_4.wordBreak;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
 
@@ -33,7 +33,7 @@ public class main {
         Integer[] tree_input_1 = {4,1,6,0,2,5,7,null,null,null,3,null,null,null,8};
         Integer[] tree_input_2 = {5,4,8,11,null,13,4,7,2,null,null,5,1};
 
-        String s = "leetcode";
+        String s = "catsandog";
         String t = "a good   example";
 
         ListNode list_1 = make_list(list_input_1);
@@ -42,8 +42,10 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         List<String> wordsDict = new ArrayList<>();
-        wordsDict.add("leet");
-        wordsDict.add("code");
+        wordsDict.add("cats");
+        wordsDict.add("dog");
+        wordsDict.add("sand");
+        wordsDict.add("and");
 
         //#############################################################################################
 //        Integer kk = Integer.valueOf(123);
