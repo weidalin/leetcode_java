@@ -1,5 +1,7 @@
 package written_examination.autumn.autumn02_lanhu;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -26,25 +28,27 @@ import java.util.Stack;
  * 输入：s = ""
  * 输出：0
  */
-public class lanhu02_Main {
+public class lanhu02_Main_res_stack {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        Stack<Character> stack = new Stack<>();
-        int res = 0;
-        int cur_res = 0;
-        for(char ch : str.toCharArray()){
-            if(ch == '('){
-                stack.add(ch);
-            }else if(stack.isEmpty()){
-                cur_res = 0;
-            }else{
+        String s = sc.nextLine();
+        int maxans = 0;
+        Deque<Integer> stack = new LinkedList<Integer>();
+        stack.push(-1);
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
+                stack.push(i);
+            } else {
                 stack.pop();
-                cur_res+=2;
-                res = Math.max(cur_res, res);
+                if (stack.isEmpty()) {
+                    stack.push(i);
+                } else {
+                    maxans = Math.max(maxans, i - stack.peek());
+                }
             }
         }
-        System.out.println(res);
+//        return maxans;
+        System.out.println(maxans);
     }
 }
 // )))()()))

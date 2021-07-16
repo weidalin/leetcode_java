@@ -26,26 +26,25 @@ import java.util.Stack;
  * 输入：s = ""
  * 输出：0
  */
-public class lanhu02_Main {
+public class lanhu02_Main_res_dp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        Stack<Character> stack = new Stack<>();
-        int res = 0;
-        int cur_res = 0;
-        for(char ch : str.toCharArray()){
-            if(ch == '('){
-                stack.add(ch);
-            }else if(stack.isEmpty()){
-                cur_res = 0;
-            }else{
-                stack.pop();
-                cur_res+=2;
-                res = Math.max(cur_res, res);
+        int max_res = 0;
+        int[] dp = new int[str.length()];
+        for(int i  = 1; i < str.length(); i++){
+            if(str.charAt(i) == ')'){
+                if(str.charAt(i - 1) == '('){
+                    dp[i] = (i>=2 ? dp[i-2] : 0) + 2;
+                }else if(i - dp[i-1] > 0 && str.charAt(i - dp[i-1] - 1) == '('){
+                    dp[i] = dp[i-1] + ((i-dp[i-1]) >= 2 ? dp[i-1] - 2 : 0) + 2;
+                }
+                max_res = Math.max(max_res, dp[i]);
             }
         }
-        System.out.println(res);
+        System.out.println(max_res);
+//        return max_res;
     }
 }
 // )))()()))
-// "()(()"
+// ()(()
