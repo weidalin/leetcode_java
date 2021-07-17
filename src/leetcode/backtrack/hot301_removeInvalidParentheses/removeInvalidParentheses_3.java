@@ -1,4 +1,4 @@
-package leetcode.hotcode.hot301_removeInvalidParentheses;
+package leetcode.backtrack.hot301_removeInvalidParentheses;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
  * 输入：s = ")("
  * 输出：[""]
  */
-public class removeInvalidParentheses_1 {
+public class removeInvalidParentheses_3 {
     public List<String> removeInvalidParentheses(String s) {
         List<String> res = new ArrayList<>();
         dfs(s, res, '(', ')', 0, 0);
@@ -33,30 +33,19 @@ public class removeInvalidParentheses_1 {
     private void dfs(String s, List<String> res, char opening, char closing, int i, int lastRemove) {
         int count = 0;
         while(i < s.length() && count >= 0){
-            if(s.charAt(i) == opening){
-                count++;
-            }else if(s.charAt(i) == closing){
-                count --;
-            }
+            if(s.charAt(i) == opening)  count++;
+            else if(s.charAt(i) == closing) count--;
             i++;
         }
-
-        if(count < 0){
-            for(int j = lastRemove; j < i; j++){
-                // 多了), 删除他并且dfs
-                if(s.charAt(j) == closing && (j == 0 || s.charAt(j - 1) != closing)){
-                    dfs(s.substring(0,j) + s.substring(j + 1), res, opening, closing,i - 1,j);
-                }
-            }
-        }else if(count > 0){
-            // 多了 ( , 需要从右到左去删除
-            dfs(new StringBuilder(s).reverse().toString(), res, closing, opening, 0, 0);
+        if(count >= 0){
+            s = new StringBuilder(s).reverse().toString();
+            if(opening=='(')    dfs(s, res, opening, closing, 0,0);
+            else res.add(s);
         }else{
-            // 平衡， 添加到res
-            if(opening == '('){
-                res.add(s);
-            }else{
-                res.add(new StringBuilder(s).reverse().toString());
+            for(int j = lastRemove; j < i; j++){
+                if(s.charAt(j) == closing && (j == 0 || s.charAt(j - 1) != closing)){
+                    dfs(s.substring(0, j) + s.substring(j + 1), res, opening, closing, i - 1, j );
+                }
             }
         }
     }
