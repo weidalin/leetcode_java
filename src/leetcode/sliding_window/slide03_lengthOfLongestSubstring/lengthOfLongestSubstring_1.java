@@ -35,12 +35,10 @@ public class lengthOfLongestSubstring_1 {
         Map<Character, Integer> map = new HashMap<>();
         int left = 0, max = 0;
         for(int i = 0; i < s.length(); i++){
-            char ch = s.charAt(i);
-            if(map.containsKey(ch)){
-                left = Math.max(left, map.get(ch) + 1);
-            }
-            map.put(ch, i);
+            if(map.containsKey(s.charAt(i)))
+                left = Math.max(left, map.getOrDefault(s.charAt(i), 0) + 1);
             max = Math.max(max, i - left + 1);
+            map.put(s.charAt(i), i);
         }
         return max;
     }

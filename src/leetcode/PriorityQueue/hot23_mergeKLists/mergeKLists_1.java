@@ -4,6 +4,7 @@ import tools.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * 23. 合并K个升序链表
@@ -26,15 +27,17 @@ import java.util.PriorityQueue;
 public class mergeKLists_1 {
     public ListNode mergeKLists(ListNode[] lists) {
         if(lists == null || lists.length == 0)  return null;
-        PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length,
-                new Comparator<ListNode>() {
-                    @Override
-                    public int compare(ListNode o1, ListNode o2) {
-                        if(o1.val < o2.val) return -1;
-                        else if(o1.val == o2.val)   return 0;
-                        else    return 1;
-                    }
-                });
+//        PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length,
+//                new Comparator<ListNode>() {
+//                    @Override
+//                    public int compare(ListNode o1, ListNode o2) {
+//                        if(o1.val < o2.val) return -1;
+//                        else if(o1.val == o2.val)   return 0;
+//                        else    return 1;
+//                    }
+//                });
+
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length, (x, y) -> (x.val-y.val));
         ListNode dummy = new ListNode(0);
         ListNode p = dummy;
         for(ListNode node : lists){

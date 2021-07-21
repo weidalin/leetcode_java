@@ -1,5 +1,7 @@
 package leetcode.sliding_window.slide76_minWindow;
 
+import java.util.Locale;
+
 /**
  *
  给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
@@ -16,7 +18,36 @@ package leetcode.sliding_window.slide76_minWindow;
  */
 public class minWindow_1 {
     public String minWindow(String s, String t) {
-        return "";
+        if(s == null || s.length() == 0 || t == null || t.length() == 0)    return "";
+        int l = 0, r = 0, size = Integer.MAX_VALUE, start = 0, count = t.length();
+        int[] cnt = new int[128];
+        for(char c : t.toCharArray()){
+            cnt[c]++;
+        }
+        while(r < s.length()){
+            char ch = s.charAt(r);
+            // 1. 需要ch
+            if(cnt[ch] > 0){
+                count --;
+            }
+            cnt[ch] --;
+            // 2. 满足条件，l右移动
+            if(count == 0){
+                while(l < r && cnt[s.charAt(l)] < 0){
+                    cnt[s.charAt(l)]++;
+                    l++;
+                }
 
+                if(r - l + 1 < size){
+                    size = r - l + 1;
+                    start = l;
+                }
+                cnt[s.charAt(l)] ++;
+                l++;
+                count++;
+            }
+            r++;
+        }
+        return size == Integer.MAX_VALUE ? "" : s.substring(start, start + size);
     }
 }
