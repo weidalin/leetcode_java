@@ -31,19 +31,20 @@ public class checkInclusion_1 {
         while(r < s2.length()) {
             int ch = s2.charAt(r);
             cnt[ch]--;
-            while(cnt[ch] <= 0){
+            while(cnt[ch] < 0){
                 cnt[s2.charAt(l)]++;
                 l++;
             }
             if(r - l + 1 == n){
                 return true;
             }
+            r++;
         }
         return false;
     }
 
     public static void main(String[] args) {
-        String s1 = "ab", s2 = "eidboaoo";
+        String s1 = "ab", s2 = "eidaaoo";
         boolean res = checkInclusion(s1,s2);
         System.out.println(res);
     }
