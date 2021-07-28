@@ -8,7 +8,7 @@ package leetcode.sliding_window.slide560_subarraySum;
  * 输入:nums = [1,1,1], k = 2
  * 输出: 2 , [1,1] 与 [1,1] 为两种不同的情况。
  */
-public class subarraySum_1 {
+public class subarraySum_2 {
     /**
      * 这道题好像不适合使用滑动窗口，因为数组元素不是正整数
      * @param nums
