@@ -5,6 +5,7 @@ import tools.TreeNode;
 
 import java.util.List;
 
+import static leetcode.hotcode.hot22_generateParenthesis.test.generateParenthesis;
 import static leetcode.hotcode.hot94_inorderTraversal.inorderTraversal_1.inorderTraversal;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
@@ -40,9 +41,9 @@ public class main {
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
-//        List<String> res = generateParenthesis(3);
+        List<String> res = generateParenthesis(3);
 //        print_ListNode(res);
-//        System.out.println(res);
+        System.out.println(res);
 //        print_arr(res);
     }
 
