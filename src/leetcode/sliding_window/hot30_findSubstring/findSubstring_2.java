@@ -1,4 +1,4 @@
-package leetcode.sliding_window.offer30_findSubstring;
+package leetcode.sliding_window.hot30_findSubstring;
 
 import java.util.ArrayList;
 import java.util.HashMap;
