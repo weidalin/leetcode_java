@@ -2,8 +2,10 @@ package leetcode.Arrays_stream.hot49_groupAnagrams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 49. 字母异位词分组
@@ -29,5 +31,17 @@ public class groupAnagrams_1 {
                     Arrays.sort(array);
                     return new String(array);
                 })).values());
+    }
+
+    public static void main(String[] args) {
+        String[] str = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        Stream<String> stream = Arrays.stream(str);
+        Collection<List<String>> collection = stream.collect(Collectors.groupingBy(strs -> {
+            char[] array = strs.toCharArray();
+            Arrays.sort(array);
+            return new String(array);
+        })).values();
+        List<List<String>> res = new ArrayList<>(collection);
+        System.out.println(res);
     }
 }
