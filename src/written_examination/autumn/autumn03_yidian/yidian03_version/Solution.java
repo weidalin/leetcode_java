@@ -1,4 +1,4 @@
-package written_examination.autumn.autmn03_yidian.yidian03_version;
+package written_examination.autumn.autumn03_yidian.yidian03_version;
 
 import java.util.Arrays;
 

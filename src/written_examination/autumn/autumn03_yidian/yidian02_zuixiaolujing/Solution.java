@@ -1,4 +1,4 @@
-package written_examination.autumn.autmn03_yidian.yidian02_zuixiaolujing;
+package written_examination.autumn.autumn03_yidian.yidian02_zuixiaolujing;
 
 public class Solution {
     /**
