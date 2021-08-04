@@ -10,9 +10,7 @@ n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并
  */
 public class solveNQueens {
     public static List<List<String>> solveNQueens(int n) {
-        //第queens[i-1] = j 表示[i][j]放置了皇后
         char[][] queens = new char[n][n];
-//        Arrays.fill(queens[0], '.');
         List<List<String>> res = new LinkedList<>();
         backtrack(queens, res,0,  n);
         return res;
@@ -87,25 +85,4 @@ public class solveNQueens {
  * 炫耀一下:
  */
 
-
-    /**
-     * [i,j] fit?
-     * @param queens
-     * @param i
-     * @param j
-     * @return
-     */
-    private static boolean fit(int[] queens, int i, int j) {
-        //判断列
-        for (int tmp = 0; tmp < i; tmp++){
-            if(queens[tmp] == j)
-                return false;
-        }
-        //判断行
-        if (queens[i] != -1)
-            return false;
-        //判断右下斜对角线
-        //判断左上斜对角线
-        return true;
-    }
 }

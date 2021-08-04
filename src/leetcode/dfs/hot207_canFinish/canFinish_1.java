@@ -46,7 +46,7 @@ public class canFinish_1 {
         if(flags[i] == -1)  return true;
         flags[i] = 1;
         for(Integer j : adjacency.get(i)){
-            if(!dfs(adjacency, flags, i))   return false;
+            if(!dfs(adjacency, flags, j))   return false;
         }
         flags[i] = -1;
         return true;

@@ -37,12 +37,12 @@ public class wordBreak_4 {
         if(i == s.length()){
             return true;
         }
-        // 从当前start是否可以直接找到最后，不等于null，说明已经查找过了，直接利用之前的结果
+        // 从当前start是否可以直接找到最后，不等于null，说明已经查找过了，直接利用之前的结果visited[i]
         if(visited[i] != null){
             return visited[i];
         }
         for(int j = i+1; j <= s.length(); j++){
-            // 当前单词包含在字典表中，并且一路查下去，都能找到
+            // 当前单词 s[i:j] 包含在字典表中，并且一路查下去，都能找到,那么返回true
             if(wordDict.contains(s.substring(i, j)) && dfs(s, j, wordDict, visited)){
                 visited[i] = true;
                 return true;
