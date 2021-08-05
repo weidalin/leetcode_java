@@ -49,8 +49,9 @@ public class removeInvalidParentheses_2 {
     public static void dfs(int idx, int leftCount, int rightCount, int leftRemove, int rightRemove, String tmp, Set<String> res){
         // 0. 结束条件
         if(idx == len){
-            if(leftRemove == 0 && rightRemove == 0)
+            if(leftRemove == 0 && rightRemove == 0) {
                 res.add(tmp);
+            }
             return;
         }
         // 1. 删除当前字符
@@ -74,9 +75,8 @@ public class removeInvalidParentheses_2 {
 //              }
         }else{
             // 2.3 保留其他字符
-            dfs(idx + 1, leftCount, rightCount, leftRemove, rightRemove,tmp, res);
+            dfs(idx + 1, leftCount, rightCount, leftRemove, rightRemove, tmp, res);
         }
-        tmp = tmp.substring(0, tmp.length()-1);
     }
     public static void main(String[] args) {
         String str = "()())()";
