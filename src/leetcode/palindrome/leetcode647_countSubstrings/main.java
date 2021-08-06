@@ -1,13 +1,11 @@
-package leetcode.dfs.leetcode647_countSubstrings;
+package leetcode.palindrome.leetcode647_countSubstrings;
 
 import tools.ListNode;
 import tools.TreeNode;
 
-import static leetcode.dfs.leetcode647_countSubstrings.countSubstrings_1.countSubstrings;
-import static leetcode.hotcode.hot266_invertTree.InvertTree_2.invertTree;
+import static leetcode.palindrome.leetcode647_countSubstrings.countSubstrings_1.countSubstrings;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
-import static tools.Weida_utils.print_tree;
 
 public class main {
     public  static void main(String[] args) {

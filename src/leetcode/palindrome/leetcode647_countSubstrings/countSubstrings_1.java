@@ -1,4 +1,4 @@
-package leetcode.dfs.leetcode647_countSubstrings;
+package leetcode.palindrome.leetcode647_countSubstrings;
 
 /**
  * 647. 回文子串
