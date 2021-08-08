@@ -51,9 +51,12 @@ public class maxAreaOfIsland_1 {
         }
 
         grid[i][j] = 2;
-        return 1 + dfs(grid, i + 1, j) +
+        int res = 1 + dfs(grid, i + 1, j) +
                 dfs(grid, i - 1, j) +
                 dfs(grid, i, j+1) +
                 dfs(grid, i, j-1);
+
+        grid[i][j] = 1; // 回溯
+        return res;
     }
 }

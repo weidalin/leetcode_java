@@ -1,66 +1,60 @@
 package leetcode.dfs.leetcode827_largestIsland;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class largestIsland_1 {
-    static int[] dr = new int[]{-1, 0, 1, 0};
-    static int[] dc = new int[]{0, -1, 0, 1};
-    static int[][] grid;
-    static int N;
-
-    public static int largestIsland(int[][] grids) {
-        grid = grids;
-        N = grid.length;
-
+    public int largestIsland(int[][] grid) {
+        if (grid == null || grid.length == 0) return 1;
+        int res = 0;
         int index = 2;
-        int[] area = new int[N*N + 2];
-        for (int r = 0; r < N; ++r)
-            for (int c = 0; c < N; ++c)
-                if (grid[r][c] == 1)
-                    area[index] = dfs(r, c, index++);
-
-        int ans = 0;
-        for (int x: area) ans = Math.max(ans, x);
-        for (int r = 0; r < N; ++r)
-            for (int c = 0; c < N; ++c)
-                if (grid[r][c] == 0) {
-                    Set<Integer> seen = new HashSet();
-                    for (Integer move: neighbors(r, c))
-                        if (grid[move / N][move % N] > 1)
-                            seen.add(grid[move / N][move % N]);
-
-                    int bns = 1;
-                    for (int i: seen) bns += area[i];
-                    ans = Math.max(ans, bns);
+        HashMap<Integer, Integer> indexAndAreas = new HashMap<>();
+        for (int r = 0; r < grid.length; r++) {
+            for (int c = 0; c < grid[0].length; c++) {
+                if (grid[r][c] == 1) {
+                    int area = area(grid, r, c, index);
+                    indexAndAreas.put(index, area);
+                    index++;
+                    res = Math.max(res, area);
                 }
-
-        return ans;
-    }
-
-    public static int dfs(int r, int c, int index) {
-        int ans = 1;
-        grid[r][c] = index;
-        for (Integer move: neighbors(r, c)) {
-            if (grid[move / N][move % N] == 1) {
-                grid[move / N][move % N] = index;
-                ans += dfs(move / N, move % N, index);
             }
         }
-
-        return ans;
+        System.out.println(res);
+        if (res == 0) return 1;
+        for (int r = 0; r < grid.length; r++) {
+            for (int c = 0; c < grid[0].length; c++) {
+                if (grid[r][c] == 0) {//遍历海洋格子
+                    HashSet<Integer> hashSet = findNeighbour(grid, r, c);
+                    if (hashSet.size() < 1) continue;
+                    int twoIsland = 1;
+                    for (Integer i : hashSet) twoIsland += indexAndAreas.get(i);
+                    res = Math.max(res, twoIsland);
+                }
+            }
+        }
+        return res;
     }
 
-    public static List<Integer> neighbors(int r, int c) {
-        List<Integer> ans = new ArrayList();
-        for (int k = 0; k < 4; ++k) {
-            int nr = r + dr[k];
-            int nc = c + dc[k];
-            if (0 <= nr && nr < N && 0 <= nc && nc < N)
-                ans.add(nr * N + nc);
-        }
-        return ans;
+    private HashSet<Integer> findNeighbour(int[][] grid, int r, int c) {
+        HashSet<Integer> hashSet = new HashSet<>();
+        if (inArea(grid, r - 1, c) && grid[r - 1][c] != 0)
+            hashSet.add(grid[r - 1][c]);
+        if (inArea(grid, r + 1, c) && grid[r + 1][c] != 0)
+            hashSet.add(grid[r + 1][c]);
+        if (inArea(grid, r, c - 1) && grid[r][c - 1] != 0)
+            hashSet.add(grid[r][c - 1]);
+        if (inArea(grid, r, c + 1) && grid[r][c + 1] != 0)
+            hashSet.add(grid[r][c + 1]);
+        return hashSet;
+    }
+
+    private int area(int[][] grid, int r, int c, int index) {
+        if (!inArea(grid, r, c)) return 0;
+        if (grid[r][c] != 1) return 0;
+        grid[r][c] = index;
+        return 1 + area(grid, r - 1, c, index) + area(grid, r + 1, c, index) + area(grid, r, c - 1, index) + area(grid, r, c + 1, index);
+    }
+
+    private boolean inArea(int[][] grid, int r, int c) {
+        return r >= 0 && r < grid.length && c >= 0 && c < grid[0].length;
     }
 }
