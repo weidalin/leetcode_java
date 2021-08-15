@@ -20,7 +20,6 @@ public class Climbing_stairs_1 {
     public static int climbStairs(int n) {
         if (n <= 2)
             return n;
-        int pred1 = 0, pred2 = 0;
         return climbStairs(n - 1) + climbStairs(n - 2);
     }
 /**

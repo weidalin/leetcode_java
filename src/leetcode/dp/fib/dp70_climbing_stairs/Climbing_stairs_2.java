@@ -23,8 +23,8 @@ public class Climbing_stairs_2 {
         int pred1 = 2, pred2 = 1;
         for (int i = 2; i < n; i++){
             int tmp = pred1;
-            pred1 = pred2;
             pred1 = pred2 + tmp;
+            pred2 = pred1;
         }
         return pred1;
     }
