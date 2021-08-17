@@ -1,5 +1,4 @@
-package leetcode.listnode.hot234_palindrome;
-
+package leetcode.palindrome.hot234_palindrome;
 import tools.ListNode;
 
 /***
@@ -15,7 +14,7 @@ import tools.ListNode;
  * 输入: 1->2->2->1
  * 输出: true
  */
-class Palindrome_3 {
+public class Palindrome_3 {
     //递归
     private ListNode frontPointer;
     public boolean isPalindrome(ListNode head) {

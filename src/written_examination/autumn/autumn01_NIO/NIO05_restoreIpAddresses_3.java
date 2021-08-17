@@ -3,7 +3,6 @@ package written_examination.autumn.autumn01_NIO;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
-import java.util.List;
 
 /**
  * 原题：ip地址
@@ -38,47 +37,58 @@ import java.util.List;
  * 输出：["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
  *
  */
-public class NIO05_restoreIpAddresses {
-    static List<String> res;
-    public static List<String> restoreIpAddresses(String s) {
-        res = new ArrayList<>();
-        if(s.length() > 12 || s.length() < 4)
+public class NIO05_restoreIpAddresses_3 {
+    public static ArrayList<String> restoreIpAddresses (String s) {
+        int len = s.length();
+        ArrayList<String> res = new ArrayList<>();
+        if(len > 12 || len < 4){
             return res;
-        Deque<String> path = new ArrayDeque<>();
-        dfs(0, 0, s, path);
+        }
+        Deque<String> path = new ArrayDeque<>(4);
+        dfs(s, len, 0, 4, path, res);
         return res;
-    }
-    public static void dfs(int i, int dot, String s, Deque<String> path){
-        if(i == s.length()){
-            if(dot == 4){
-                res.add(String.join(".", path));
-            }
-            return;
-        }
-        for(int j = i; j < i + 3; j++){
-            if(j >= s.length())
-                break;
-            if(judgeIP(s, i, j)){
-                path.addLast(s.substring(i, j + 1));
-                dfs(j + 1, dot + 1, s, path);
-                path.removeLast();
-            }
-        }
-    }
-    public static boolean judgeIP(String s, int i, int j){
-        if(j - i > 0 && s.charAt(i) == '0'){
-            return false;
-        }
-        int cur_num = 0;
-        while(i <= j){
-            cur_num = cur_num * 10 + s.charAt(i) - '0';
-            i++;
-        }
-        return cur_num >= 0 && cur_num <= 255;
+
     }
 
+    private static void dfs(String s, int len, int begin, int dot_residue, Deque<String> path, ArrayList<String> res) {
+        if(begin ==  len){
+            if(dot_residue == 0){
+                res.add(String.join(".", path));
+            }
+            return ;
+        }
+        for(int i = begin; i < begin + 3; i++){
+            if(i >= len){
+                break;
+            }
+            if(dot_residue * 3 < len - i){
+                continue;
+            }
+            if(judgeIpSegment(s, begin, i)){
+                String cur_ip = s.substring(begin, i+1);
+                path.addLast(cur_ip);
+
+                dfs(s, len, i+1, dot_residue - 1, path, res);
+                path.removeLast();
+            }
+
+        }
+    }
+
+    private static boolean judgeIpSegment(String s, int left, int right) {
+        int len = right - left + 1;
+        if(len > 1 && s.charAt(left) == '0'){
+            return false;
+        }
+        int res = 0;
+        while(left <= right){
+            res = res * 10 + s.charAt(left) - '0';
+            left ++;
+        }
+        return res >= 0 && res <= 255;
+    }
     public static void main(String[] args) {
-        List<String> res = restoreIpAddresses("25525511135");
+        ArrayList<String> res = restoreIpAddresses("25525511135");
 //        ArrayList<String> res = restoreIpAddresses("0000");
         System.out.println(res);
     }

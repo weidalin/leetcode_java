@@ -1,4 +1,4 @@
-package leetcode.listnode.hot234_palindrome;
+package leetcode.palindrome.hot234_palindrome;
 
 import tools.ListNode;
 
@@ -18,7 +18,7 @@ import java.util.List;
  * 输入: 1->2->2->1
  * 输出: true
  */
-class Palindrome__2 {
+public class Palindrome__2 {
     public boolean isPalindrome(ListNode head) {
         List<Integer> list = new ArrayList<>();
         while(head != null){

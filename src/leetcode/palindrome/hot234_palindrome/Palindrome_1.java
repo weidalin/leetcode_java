@@ -1,4 +1,4 @@
-package leetcode.listnode.hot234_palindrome;
+package leetcode.palindrome.hot234_palindrome;
 
 import tools.ListNode;
 
@@ -17,7 +17,7 @@ import static tools.Weida_utils.print_ListNode;
  * 输入: 1->2->2->1
  * 输出: true
  */
-class Palindrome_1 {
+public class Palindrome_1 {
     public static boolean isPalindrome(ListNode head) {
         ListNode slow = head, fast = head;
         ListNode pre, prepre = null;
