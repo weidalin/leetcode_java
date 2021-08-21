@@ -37,9 +37,10 @@ import java.util.Map;
  * lRUCache.get(3);    // 返回 3
  * lRUCache.get(4);    // 返回 4
  */
-class LRUCache_1 extends LinkedHashMap<Integer, Integer> {
+class LRUCache_1_LinkedHashMap extends LinkedHashMap<Integer, Integer> {
     private int capacity;
-    public LRUCache_1(int capacity) {
+    public LRUCache_1_LinkedHashMap(int capacity) {
+        // 注意这里将LinkedHashMap的accessOrder设为true
         super(capacity, 0.75F, true);
         this.capacity = capacity;
 
