@@ -26,10 +26,12 @@ public class numTrees_1 {
         for(int i = 2; i <= n; i++){
             for(int j = 1; j <= i; j++){
                 dp[i] += dp[j-1] * dp[i - j];
-                //dp[2] = dp[0] * dp[1] + G[1] * G[0]
-                //dp[3] = dp[0] * dp[2] + dp[1] * dp[1] + G[2] * G[0]
             }
         }
         return dp[n];
+    }
+
+    public static void main(String[] args) {
+
     }
 }
