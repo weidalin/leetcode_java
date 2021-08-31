@@ -17,7 +17,6 @@ public class LRUCache_3_LRUK extends LRUCache{
 
     @Override
     public int get(int key) {
-
         // 记录数据访问次数
         int historyCount = historyList.get(key);
         historyCount = historyCount == -1 ? 0 : historyCount;
@@ -36,7 +35,7 @@ public class LRUCache_3_LRUK extends LRUCache{
         // 如果数据历史访问次数达到上限，则加入缓存
         int historyCount = historyList.get(key);
         historyCount = historyCount == -1 ? 0 : historyCount;
-        if (historyCount >= k) {
+        if (historyCount + 1 >= k) {
             // 移除历史访问记录
 //            historyList.remove(key);
             super.put(key, value);
