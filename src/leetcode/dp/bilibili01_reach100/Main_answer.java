@@ -30,24 +30,22 @@ public class Main_answer {
     // https://leetcode-cn.com/problems/can-i-win/solution/464-wo-neng-ying-ma-dai-bei-wang-lu-de-d-qu1t/
     public static boolean canIWin(int maxChoosableInteger, int desiredTotal) {
         if(maxChoosableInteger >= desiredTotal) return true;
-        if((1 + maxChoosableInteger) * maxChoosableInteger / 2 < desiredTotal)  return false;
-        return dfs(0, desiredTotal, new Boolean[1 << maxChoosableInteger], maxChoosableInteger);
+        if((1+maxChoosableInteger) * maxChoosableInteger / 2 < desiredTotal)    return false;
+        return dfs(maxChoosableInteger, 0, new Boolean[1 << maxChoosableInteger], desiredTotal);
     }
-
-    private static boolean dfs(int state, int desiredTotal, Boolean[] dp, int maxChoosableInteger) {
+    public static boolean dfs(int maxChoosableInteger, int state, Boolean[] dp, int desiredTotal){
         if(dp[state] != null){
             return dp[state];
         }
-        for(int i = 1; state <= maxChoosableInteger; i++){
-            int cur = 1 << (i-1);
-            if((cur & state) != 0){ // 每个数只能选择一次
-                continue;
-            }
-            if(i >= desiredTotal || dfs(i, desiredTotal, dp, maxChoosableInteger)){
-                return dp[i] = true;
+        for(int i = 1; i <= maxChoosableInteger; i++){
+            int cur = 1 << (i - 1);
+            if((cur & state) != 0)  continue;
+
+            if(i >= desiredTotal || !dfs(maxChoosableInteger, state | cur, dp, desiredTotal - i)){
+                return dp[state] = true;
             }
         }
-        return false;
+        return dp[state] = false;
     }
 }
 
