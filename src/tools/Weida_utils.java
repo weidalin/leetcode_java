@@ -7,6 +7,11 @@ import java.util.Queue;
 
 public class Weida_utils {
     //打印数组
+    public static void print_arr(char[] arr){
+        for (Object obj: arr){
+            System.out.print(obj+" ");
+        }
+    }
     public static void print_arr(int[] arr){
         for (Object obj: arr){
             System.out.print(obj+" ");

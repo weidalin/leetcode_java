@@ -27,7 +27,7 @@ public class minPathSum_2 {
         if (grid == null)
             return -1;
         int rows = grid.length, cols = grid[0].length;
-        int dp[][] = new int[rows][cols];
+        int[][] dp = new int[rows][cols];
         dp[0][0] = grid[0][0];
         for(int row = 1; row < rows; row++){//init first col
             dp[row][0] = dp[row-1][0] + grid[row][0];

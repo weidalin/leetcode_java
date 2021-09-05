@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 2021/9/5 12:09 上午
  */
 // https://blog.csdn.net/weixin_41896265/article/details/120105359
-public class Main {
+public class Main_answer {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
