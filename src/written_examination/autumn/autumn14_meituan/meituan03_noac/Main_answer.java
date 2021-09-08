@@ -24,10 +24,15 @@ public class Main_answer {
         // dp[i] = dp[i-1] + i - indexa;
         for(int i=2;i<=n;++i){
             if(c[i-2]=='a' && c[i-1]=='c'){ // i前两个为ac
-                dp[i] = dp[i-1] + i - indexa;
+                dp[i] = dp[i-1] + i - indexa; // 当出现这种c c a a c 时， 需要切换i-indexa次
                 indexa++;
-                c[i-1]='a';
-                c[i-2]='c';
+                if(i-indexa >= 1){
+                    c[i-1]='a';
+                    c[indexa-2] = 'c';
+                }else {
+                    c[i-1] = 'a';
+                    c[i - 2] = 'c';
+                }
             }
             else{
                 if(c[i-1]=='a' && indexa==0){
@@ -56,4 +61,11 @@ acca
 out:
 2
 
+5
+accac
+
+返回4
+
+6
+accaca
  */

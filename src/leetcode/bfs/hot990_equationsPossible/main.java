@@ -1,7 +1,9 @@
+package leetcode.bfs.hot990_equationsPossible;
+
 import tools.ListNode;
 import tools.TreeNode;
 
-import static leetcode.hotcode.hot5_longestPalindrome.longestPalindrome_1.longestPalindrome;
+import static leetcode.hotcode.hot990_equationsPossible.equationsPossible_1.equationsPossible;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
 
@@ -29,6 +31,7 @@ public class main {
 
         String s = "babad";
         String t = "a good   example";
+        String[] strs= {"a==b","b!=a"};
 
         ListNode list_1 = make_list(list_input_1);
         ListNode list_2 = make_list(list_input_2);
@@ -37,25 +40,13 @@ public class main {
         TreeNode treeNode_2 = InitTree(tree_input_2);
         //#############################################################################################
 //        Integer kk = Integer.valueOf(123);
-        String res = longestPalindrome(s);
+        boolean res = equationsPossible(strs);
 //        print_ListNode(res);
 //        System.out.println(Integer.valueOf('1'+""));
         System.out.println(res);
 //        print_arr(res);
-//        print_tree(res);fun
-        fun(500);
+//        print_tree(res);
     }
-
-    private static int fun(int x) {
-        int c = 0;
-        while(x != 0){
-            c++;
-            x=x&(x-1);
-
-        }
-        return c;
-    }
-
 
 }
 

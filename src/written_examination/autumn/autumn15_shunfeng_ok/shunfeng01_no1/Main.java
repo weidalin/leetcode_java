@@ -1,11 +1,9 @@
-package written_examination.autumn.autumn15_shunfeng.shunfeng01_no1;
+package written_examination.autumn.autumn15_shunfeng_ok.shunfeng01_no1;
 
 /**
  * @author linweida
  * 2021/9/6 8:32 下午
  */
-
-import com.sun.org.apache.xpath.internal.objects.XNumber;
 
 import java.util.Scanner;
 
