@@ -6,7 +6,7 @@ import tools.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-import static leetcode.hotcode.hot139_wordBreak.wordBreak_4.wordBreak;
+import static leetcode.Boolean.hot139_wordBreak.wordBreak_4.wordBreak;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
 

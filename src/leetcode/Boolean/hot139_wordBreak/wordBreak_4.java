@@ -29,7 +29,8 @@ import java.util.List;
 public class wordBreak_4 {
     public static boolean wordBreak(String s, List<String> wordDict) {
         Boolean[] visited = new Boolean[s.length()];
-        return dfs(s, 0, wordDict, visited);
+        boolean res = dfs(s, 0, wordDict, visited);
+        return res;
     }
 
     private static boolean dfs(String s, int i, List<String> wordDict, Boolean[] visited) {
