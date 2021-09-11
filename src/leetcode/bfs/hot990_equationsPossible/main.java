@@ -1,12 +1,9 @@
-package leetcode.Boolean.hot139_wordBreak;
+package leetcode.bfs.hot990_equationsPossible;
 
 import tools.ListNode;
 import tools.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static leetcode.Boolean.hot139_wordBreak.wordBreak_4.wordBreak;
+import static leetcode.hotcode.hot990_equationsPossible.equationsPossible_1.equationsPossible;
 import static tools.TreeNode.InitTree;
 import static tools.Weida_utils.make_list;
 
@@ -32,24 +29,20 @@ public class main {
         Integer[] tree_input_1 = {4,1,6,0,2,5,7,null,null,null,3,null,null,null,8};
         Integer[] tree_input_2 = {5,4,8,11,null,13,4,7,2,null,null,5,1};
 
-        String s = "catsandog";
+        String s = "babad";
         String t = "a good   example";
+        String[] strs= {"a==b","b!=a"};
 
         ListNode list_1 = make_list(list_input_1);
         ListNode list_2 = make_list(list_input_2);
 
         TreeNode treeNode_1 = InitTree(tree_input_1);
         TreeNode treeNode_2 = InitTree(tree_input_2);
-        List<String> wordsDict = new ArrayList<>();
-        wordsDict.add("cats");
-        wordsDict.add("dog");
-        wordsDict.add("sand");
-        wordsDict.add("and");
-
         //#############################################################################################
 //        Integer kk = Integer.valueOf(123);
-        boolean res = wordBreak(s, wordsDict);
+        boolean res = equationsPossible(strs);
 //        print_ListNode(res);
+//        System.out.println(Integer.valueOf('1'+""));
         System.out.println(res);
 //        print_arr(res);
 //        print_tree(res);

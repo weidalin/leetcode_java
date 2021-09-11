@@ -6,8 +6,8 @@ import java.util.Scanner;
  * @author linweida
  * 2021/8/25 7:38 下午
  */
-
-public class Main_answer {
+// 力扣464：https://leetcode-cn.com/problems/can-i-win/solution/464-wo-neng-ying-ma-dai-bei-wang-lu-de-d-qu1t/
+public class MainAnswer {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
@@ -21,7 +21,15 @@ public class Main_answer {
         }
     }
 
-    // 力扣464：https://leetcode-cn.com/problems/can-i-win/solution/464-wo-neng-ying-ma-dai-bei-wang-lu-de-d-qu1t/
+    /**
+     * 使用二进制位标志选与不选
+     * 00010 --> 表示选第二个
+     * 00100 --> 表示选第三个
+     *
+     * @param maxChoosableInteger
+     * @param desiredTotal
+     * @return
+     */
     public static boolean canIWin(int maxChoosableInteger, int desiredTotal) {
         if(maxChoosableInteger > desiredTotal)  return true;
         if((1+maxChoosableInteger) * maxChoosableInteger / 2 < desiredTotal)    return false;
@@ -32,8 +40,9 @@ public class Main_answer {
             return dp[state];
         }
         for(int i = 1; i <= maxChoosableInteger; i++){
+            // i 代表第i个数字, 他的二进制位表示为 1 << (i - 1)
             int cur = 1 << (i - 1);
-            if((cur & state) != 0) { // 11 --> 1, 01 ->0
+            if((cur & state) != 0) { // 1&1 --> 1, 0&1 ->0
                 continue;
             }
             if(i >= desiredTotal || !dfs(maxChoosableInteger, cur | state, dp, desiredTotal - i)){

@@ -1,4 +1,4 @@
-package written_examination.autumn.autumn15_shunfeng.shunfeng02_lvyou;
+package written_examination.autumn.autumn15_shunfeng_ok.shunfeng02_lvyou;
 
 import java.util.*;
 

@@ -42,8 +42,20 @@ public class main {
 //        System.out.println(Integer.valueOf('1'+""));
         System.out.println(res);
 //        print_arr(res);
-//        print_tree(res);
+//        print_tree(res);fun
+        fun(500);
     }
+
+    private static int fun(int x) {
+        int c = 0;
+        while(x != 0){
+            c++;
+            x=x&(x-1);
+
+        }
+        return c;
+    }
+
 
 }
 
