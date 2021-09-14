@@ -1,5 +1,6 @@
 package written_examination.autumn.autumn15_shunfeng_OK.shunfeng02_lvyou;
 
+import java.util.HashMap;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 

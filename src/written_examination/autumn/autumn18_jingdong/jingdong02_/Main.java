@@ -34,7 +34,7 @@ public class Main {
                 BSupplyA.put(b, set2);
             }
         }
-        sc.nextLine();
+//        sc.nextLine();
         Set<Integer> currenOpen = new HashSet<>();
         for(int i = 0; i < q; i++){
             int x = sc.nextInt(), y = sc.nextInt();
@@ -69,8 +69,7 @@ public class Main {
 /*
 3 2
 1 2 4
-1 3
-0
+1 3 5
 1 1
 0 3
  */
