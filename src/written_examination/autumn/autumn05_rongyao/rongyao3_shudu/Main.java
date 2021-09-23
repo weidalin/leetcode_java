@@ -18,6 +18,7 @@ public class Main {
     static boolean valid = false;
     static List<int[]> space = new ArrayList<int[]>();
     static int[][] nums = new int[9][9];
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         for(int i = 0; i < 9; i++){
@@ -28,15 +29,13 @@ public class Main {
                 nums[i][j] = Integer.valueOf(strlist[j]);
             }
         }
-
         solveSudu(nums);
     }
-
 
     public static void solveSudu(int[][] board) {
         for(int i = 0; i < 9; i++){
             for(int j = 0; j < 9; j++){
-                if(board[i][j]== 0){
+                if(board[i][j] == 0){
                     space.add(new int[]{i,j});
                 }else{
                     int digit = board[i][j] - 1;
@@ -74,7 +73,6 @@ public class Main {
     }
 }
 /*
-
 {5,0,0,6,0,2,0,0,0}
 {0,0,8,0,7,0,2,0,0}
 {7,0,0,8,1,0,5,4,6}

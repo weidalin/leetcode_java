@@ -20,8 +20,8 @@ package written_examination.autumn.autumn28_wanmeishijie.wanmei01;
  *         [2,3,4,0]，2村-3村，成本4，未建造
  * 所以只需要建造1村-2村以及1村-3村的道路，即可全部联通，且总成本为3最低
  */
+// 0
 public class Main {
-
     public int minCost (int N, int[][] roads) {
         // write code here
         return 0;
