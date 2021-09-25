@@ -39,16 +39,16 @@ public class MainAnswer {
     }
 
     public static List<String> fullJustify(String[] words, int maxWidth) {
-        //定义0-maxWidth个空格字符串，方便之后直接调用
+        // 定义0-maxWidth个空格字符串，方便之后直接调用
         final String[] space = new String[maxWidth+1];
         StringBuffer s = new StringBuffer();
         for(int i = 0;i<maxWidth+1;i++){
             space[i] = s.toString();
             s.append(" ");
         }
-        //新建List，用来存最后的结果。
+        // 新建List，用来存最后的结果。
         List<String> pWords = new ArrayList<String>();
-        //遍历整个words，一行一行的排版
+        // 遍历整个words，一行一行的排版
         for(int i=0; i<words.length; i++){
             int curlen = words[i].length(); //记录当前已读取单词的长度，当>=maxWidth时进行排版
             int startI = i;                //记录本次读取单词的起点
@@ -60,11 +60,12 @@ public class MainAnswer {
                 curlen = curlen-words[i].length()-1;
                 i--;
             }
-            //一行一行的排版
+            // 一行一行的排版
             pWords.add(processCurline(words,startI,i,curlen,maxWidth,space));
         }
         return pWords;
     }
+
     public static String processCurline(String[] words, int si, int ei, int curlen, int maxWidth, String[] space){
         StringBuffer sb = new StringBuffer();   //用来进行排版
         int map = ei-si;                   // 记录单词之间的有几个间隙

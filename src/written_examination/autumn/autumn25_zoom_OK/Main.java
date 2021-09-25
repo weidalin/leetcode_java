@@ -1,4 +1,4 @@
-package written_examination.autumn.autumn25_zoom;
+package written_examination.autumn.autumn25_zoom_OK;
 
 import java.util.HashMap;
 import java.util.Map;
