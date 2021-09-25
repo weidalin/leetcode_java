@@ -7,6 +7,7 @@ package test;
 
 
 class B extends A{
+    int value = 0;
 //class B {
     static {
         System.out.println("b static block");
@@ -19,17 +20,23 @@ class B extends A{
     }
     public B(){
 //        super();
+
         System.out.println("b construct");
     }
 
     public static void main(String[] args) {
-//        final B b = new B();
-        final A b = new B();
+        final B b = new B();
+//        final A b = new B();
 //        final A b = new A();
+        func(b);
         System.out.println("----------");
         b.a();
         System.out.println("----------");
 
+    }
+
+    private static void func(B b) {
+        b.value = 1;
     }
 
 }

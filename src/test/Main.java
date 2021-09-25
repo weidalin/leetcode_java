@@ -8,9 +8,11 @@ import java.util.Scanner;
  */
 
 public class Main {
-
+    static int bb;
     public static void main(String[] args) {
-
+        int a= 10;
+        bb = a;
+        System.out.println(bb);
 //        int x = 1, y = 2, z = 3;
 //        ;
 //        System.out.println(y += (z--) / (++x));
