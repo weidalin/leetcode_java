@@ -1,9 +1,9 @@
 package test;
 
 public class aaa {
-    作者：我没拿98k
-    链接：https://www.nowcoder.com/discuss/756757?type=all&order=time&pos=&page=1&ncTraceId=&channel=-1&source_id=search_all_nctrack
-    来源：牛客网
+//    作者：我没拿98k
+//    链接：https://www.nowcoder.com/discuss/756757?type=all&order=time&pos=&page=1&ncTraceId=&channel=-1&source_id=search_all_nctrack
+//    来源：牛客网
 
     public boolean[] pathAvailable (int[][] matrix, int[][] starts, int[][] ends) {
         // write code here
